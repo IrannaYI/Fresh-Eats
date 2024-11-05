@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <title>Freshy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Rubik", sans-serif;
+        }
+
+        body {
+            background-color: #ebebe0;
+        }
+
+        .n1 {
+            display: flex;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .a1 {
+            height: 20vh;
+            width: 18vw;
+            padding: 35px;
+            background-color: white;
+        }
+
+        .main {
+            float: right;
+        }
+
+        .p1 {
+            height: 7vh;
+            width: 83vw;
+            background-color: #eb0029;
+            display: flex;
+            align-items: center;
+        }
+
+        .min1 {
+            margin-left: 5%;
+            color: white;
+        }
+
+        .min2 {
+            display: flex;
+            margin-left: 60%;
+            color: white;
+        }
+
+        .icon1 {
+            display: flex;
+            gap: 10px;
+            margin-left: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .p2 {
+            height: 13vh;
+            width: 83vw;
+            background-color: black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .p2 a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .p2 a i {
+            margin-left: 8px;
+        }
+
+        .p2 a:hover {
+            color: red;
+        }
+
+        .m1 {
+            display: flex;
+            background-image: url(./bg/bg2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 65vh;
+            width: 100%;
+            flex-direction: column;
+            margin-top: 20vh;
+        }
+
+        .m1 h1 {
+            color: white;
+            font-size: 73px;
+            font-weight: bold;
+            margin-left: 43%;
+            margin-top: 8%;
+        }
+
+        .m1 span {
+            color: #eb0029;
+            margin-left: 46%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .m1 span a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .m1 span a:hover {
+            color: #eb0029;
+        }
+
+        .m2 {
+            display: flex;
+            margin-top: 20px;
+            height: 40vh;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .m2_1 {
+            display: flex;
+            flex-direction: column;
+            height: 240px;
+            width: 460px;
+            background-size: cover;
+            background-image: url(./m_bg/b1.jpg);
+            position: relative;
+        }
+
+        .mi1 {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+
+        .mi2 {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+
+        .mi3 {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+
+        .mi4 {
+            margin-top: 30px;
+            margin-left: 30px;
+            height: 45px;
+            width: 130px;
+            color: white;
+            background-color: #eb0029;
+            border-style: none;
+            font-size: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .mi4:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+
+        .m2_min {
+            height: 82px;
+            width: 69px;
+            height: 82px;
+            width: 69px;
+            position: absolute;
+            top: 10px;
+            right: 100px;
+            animation: shake 6s infinite;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-5px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(5px);
+            }
+
+        }
+
+        .m2_max {
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            height: 140px;
+            width: 180px;
+        }
+
+        .m2_2 {
+            display: flex;
+            flex-direction: column;
+            height: 240px;
+            width: 460px;
+            background-size: cover;
+            position: relative;
+            background-image: url(./m_bg/b2.jpg)
+        }
+
+        .m2_3 {
+            display: flex;
+            flex-direction: column;
+            height: 240px;
+            width: 460px;
+            background-size: cover;
+            position: relative;
+            background-image: url(./m_bg/b3.jpg);
+        }
+
+        .m3 {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            height: 130vh;
+            float: left;
+        }
+
+        .m3_1 {
+            width: 300px;
+            height: 150px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: white;
+        }
+
+        .m3_1 h3 {
+            margin-top: 10px;
+            margin-left: 15px;
+            text-decoration: 2px underline red;
+            text-underline-offset: 10px;
+        }
+
+        .m3_1 input {
+            height: 53px;
+            width: 250px;
+            margin-top: 30px;
+            margin-left: 15px;
+            text-indent: 13px;
+            border-radius: 15px;
+            border: none;
+            background-color: #f0f5f5;
+        }
+
+        .m3_1 i {
+            margin-left: -40px;
+        }
+
+        .m3_2 {
+            width: 300px;
+            height: 250px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: white;
+        }
+
+        .m3_2 h3 {
+            margin-top: 10px;
+            margin-left: 15px;
+            text-decoration: 2px underline red;
+            text-underline-offset: 10px;
+        }
+
+        .m3_2 button {
+            height: 30px;
+            width: 90px;
+            font-size: 16px;
+            margin-top: 30px;
+            margin-left: 8px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .m3_2 button:hover {
+            background-color: #eb0029;
+            transform: scale(1.07);
+            font-weight: bold;
+        }
+
+        .m3_3 {
+            width: 300px;
+            height: 130px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: white;
+        }
+
+        .m3_3 h3 {
+            margin-top: 10px;
+            margin-left: 15px;
+            text-decoration: 2px underline red;
+            text-underline-offset: 10px;
+        }
+
+        .m3_3 input {
+            margin-top: 30px;
+            margin-left: 15px;
+        }
+
+        .m3_3 h4 {
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        .m3_4 {
+            width: 300px;
+            height: 290px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: white;
+        }
+
+        .m3_4 h3 {
+            margin-top: 10px;
+            margin-left: 15px;
+            text-decoration: 2px underline red;
+            text-underline-offset: 10px;
+        }
+
+        .m3_4 h4 {
+            margin-top: 25px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .m3_4 h4:hover {
+            color: #eb0029;
+            font-size: 20px;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+
+        .m4 {
+            height: 130vh;
+            width: 73%;
+            float: right;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .m4_1 {
+            margin-top: 20px;
+        }
+
+        .m4_1 span:hover {
+            color: #eb0029;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .m4_1 select {
+            font-size: 15px;
+            border: none;
+            height: 40px;
+            width: 170px;
+            text-indent: 10px;
+            color: gray;
+            margin-left: 60%;
+            background-color: #ffffb3;
+        }
+
+
+
+        .m4_2 {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 20px;
+            gap: 30px;
+        }
+
+        .a3 {
+            height: 350px;
+            width: 240px;
+            border-radius: 20px;
+            background-color: rgb(255, 232, 104);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .min5 {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 48px;
+            margin-top: 10px;
+            border: 3px solid;
+            border-style: dotted;
+            padding: 5px;
+            animation: blink 1s infinite;
+
+        }
+
+        @keyframes blink {
+            0% {
+                border-color: orangered;
+            }
+
+            50% {
+                border-color: transparent;
+            }
+
+            100% {
+                border-color: black;
+            }
+        }
+
+        .min6 {
+            margin-top: 25px;
+            margin-left: 45px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .min7 {
+            margin-top: 15px;
+            margin-left: 50px;
+            color: grey;
+            font-size: 15px;
+        }
+
+        .min8 {
+            margin-top: 10px;
+            margin-left: 86px;
+            font-size: 23px;
+            font-weight: bold;
+            color: #eb0029;
+        }
+
+        .m4_3 {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 20px;
+            gap: 30px;
+        }
+        .m5{
+            margin:auto;
+            display: flex;
+            gap: 50px;
+        }
+        .m5 a{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            text-align: center;
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+            border: 1px solid black;
+        }
+        .m5 a:hover{
+            transform: scale(1.2);
+            background-color: #eb0029;
+        }
+        /* footer */
+        .main4 {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(45deg, #333333, black);
+        }
+
+        .min10 {
+            height: 140px;
+            width: 80vw;
+            margin-left: 140px;
+            margin-top: 60px;
+            border-radius: 20px;
+            background-color: #fc791a;
+        }
+
+        .min10 .a6 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 32px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .a6 i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            color: #fc791a;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .a6 span {
+            margin-left: -100px;
+        }
+
+        .main5 {
+            display: flex;
+        }
+
+        .min11 {
+            height: 400px;
+            width: 350px;
+            margin-left: 140px;
+            margin-top: 30px;
+            color: grey;
+        }
+
+        .a7 {
+            height: 100px;
+            width: 200px;
+            margin-bottom: 20px;
+            margin-left: 5px;
+        }
+
+        .min11 span {
+            display: block;
+            line-height: 20px;
+        }
+
+        .a8 i {
+            display: inline-block;
+            line-height: 32px;
+            width: 40px;
+            border: 1px white solid;
+            margin-left: 20px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .min12 {
+            color: white;
+            height: 380px;
+            width: 220px;
+            margin-top: 50px;
+            margin-left: 45px;
+        }
+
+        .min12 h2 {
+            text-decoration: underline dotted;
+            text-underline-offset: 10px;
+        }
+
+        .n2 {
+            margin-top: 25px;
+            line-height: 50px;
+            font-size: 18px;
+        }
+
+        .n2 a:hover {
+            margin-left: 5px;
+            color: #eb0029;
+        }
+
+        .n2 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .min13 {
+            color: white;
+            height: 380px;
+            width: 220px;
+            margin-top: 50px;
+        }
+
+        .min13 h2 {
+            text-decoration: underline dotted;
+            text-underline-offset: 10px;
+        }
+
+        .min14 {
+            color: white;
+            height: 380px;
+            width: 280px;
+            margin-top: 50px;
+        }
+
+        .min14 h2 {
+            text-decoration: underline dotted;
+            text-underline-offset: 10px;
+        }
+
+        .n3 p {
+            margin-top: 40px;
+            font-size: 17px;
+            line-height: 18px;
+            cursor: pointer;
+        }
+
+        .n3 p:hover {
+            margin-left: 1px;
+        }
+
+        .n3 input {
+            height: 50px;
+            width: 250px;
+            border-radius: 5px;
+            margin-top: 25px;
+            text-indent: 11px;
+            border-style: none;
+            font-size: 17px;
+        }
+
+        .n3 .a9 {
+            margin-top: 40px;
+            height: 15px;
+            width: 15px;
+        }
+
+        label {
+            margin-left: 8px;
+            font-size: 19px;
+        }
+
+        .a10 {
+            height: 50px;
+            width: 49px;
+            border-radius: 8px;
+            background-color: #fc791a;
+            color: white;
+            border: none;
+            font-size: 20px;
+            margin-left: 95%;
+            cursor: pointer;
+        }
+
+        .a10:hover {
+            background: linear-gradient(blue, red);
+        }
+
+        .main6 {
+            display: flex;
+            height: 13vh;
+            width: 100%;
+            background-color: #eb0029;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .main6 p {
+            color: white;
+            margin-left: 13%;
+
+
+        }
+
+        .main6 .min15 {
+            margin-left: 45%;
+            display: flex;
+            gap: 25px;
+        }
+
+        .min15 button {
+            height: 45px;
+            width: 130px;
+            color: white;
+            border: 1px white solid;
+            border-radius: 10px;
+            background-color: #eb0029;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="n1">
+        <img src="./logo/logo.jpg" alt="oops" class="a1">
+        <div class="main">
+            <div class="p1"><span class="min1"><i class="fa-regular fa-clock"></i> 09:00 am - 06:00 pm</span><span
+                    class="min2">Follow Us : <span class="icon1"><i class="fa-brands fa-instagram"></i> <i
+                            class="fa-brands fa-twitter"></i> <i class="fa-brands fa-facebook"></i> <i
+                            class="fa-brands fa-youtube"></i></span></span></div>
+            <div class="p2">
+                <a href="index.html">Home <i class="fa-solid fa-plus"></i></a>
+                <a href="shop.html">Shop <i class="fa-solid fa-plus"></i></a>
+                <a href="about.html">About Us <i class="fa-solid fa-plus"></i></a>
+                <a href="contact.html">Contact Us <i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="m1">
+        <h1>SHOP</h1>
+        <span><a href="index.html">Home</a>&nbsp; / Shop</span>
+    </div>
+
+
+
+    <div class="m2">
+        <div class="m2_1">
+
+            <span class="mi1">Start Price $25</span><img src="./m_bg/off4.png" class="m2_min">
+            <span class="mi2">TODAY SPACIAL FOOD</span><img src="./food/min_1.png" class="m2_max">
+            <span class="mi3">Limits Time Offer</span>
+            <button class="mi4" style="background-color: #fc791a;">ORDER NOW</button>
+        </div>
+        <div class="m2_2">
+            <span class="mi1">Start Price $28</span><img src="./m_bg/off4.png" class="m2_min">
+            <span class="mi2">SPECIAL CHICKEN ROLL</span><img src="./food/min_2.png" class="m2_max">
+            <span class="mi3">Limits Time Offer</span>
+            <button class="mi4">ORDER NOW</button>
+        </div>
+        <div class="m2_3">
+            <span class="mi1">Start Price $23</span><img src="./m_bg/off4.png" class="m2_min">
+            <span class="mi2">SPICY FRIED CHICKEN</span><img src="./food/min_3.png" class="m2_max">
+            <span class="mi3">Limits Time Offer</span>
+            <button class="mi4">ORDER NOW</button>
+        </div>
+    </div>
+
+
+    <div class="m3">
+        <div class="m3_1">
+            <h3>Search</h3>
+            <input type="text" placeholder="Search Here"><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="m3_2">
+            <h3>Most Search</h3>
+            <button>Cheese</button><button>Cocktail</button><button>Drink</button>
+            <button>Noodles</button><button>Fried</button><button>Pizza</button>
+            <button>Paneer</button><button>Juice</button>
+        </div>
+        <div class="m3_3">
+            <h3>Filter By Price</h3>
+            <input type="range" min="0" max="50000" value="500">
+            <h4>Price:$100-$50000</h4>
+        </div>
+        <div class="m3_4">
+            <h3>Most Ordered Food</h3>
+            <h4>>>&nbsp;Classic Pizza</h4>
+            <h4>>>&nbsp;Paneer Tikka</h4>
+            <h4>>>&nbsp;Sandwitch</h4>
+            <h4>>>&nbsp;Briyani</h4>
+            <h4>>>&nbsp;Burger</h4>
+        </div>
+    </div>
+
+
+    <div class="m4">
+        <div class="m4_1">
+            <span>Showing Results 1-30</span>
+            <select>
+                <option>Sort by avg rating</option>
+                <option>Default sorting</option>
+                <option>Sort by Latest</option>
+                <option>Sort by popularity</option>
+                <option>Sort by price</option>
+            </select>
+        </div>
+
+        <div class="m4_2">
+            <div class="a3"><img src="./r_bg/dish_1.png" alt="oops" class="min5"><br>
+                <span class="min6">Cheese Pizza</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$30.19</span>
+            </div>
+            <div class="a3"><img src="./r_bg/dish_2.png" alt="oops" class="min5"><br>
+                <span class="min6">Chicken Fried</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$22.74</span>
+            </div>
+            <div class="a3"><img src="./r_bg/dish_3.png" alt="oops" class="min5"><br>
+                <span class="min6">Egg and Rice</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$21.32</span>
+            </div>
+            <div class="a3"><img src="./r_bg/dish_5.png" alt="oops" class="min5"><br>
+                <span class="min6">Cheese Pasta</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$20.67</span>
+            </div>
+        </div>
+
+        <div class="m4_3">
+            <div class="a3"><img src="./r_bg/dish_4.png" alt="oops" class="min5"><br>
+                <span class="min6">Paneer Briyani</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$24.19</span>
+            </div>
+            <div class="a3"><img src="./r_bg/dish_5.png" alt="oops" class="min5"><br>
+                <span class="min6">Paneer Pasta</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$29.74</span>
+            </div>
+            <div class="a3"><img src="./r_bg/dish_1.png" alt="oops" class="min5"><br>
+                <span class="min6">Cheese Pizza</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$31.32</span>
+            </div>
+            <div class="a3"><img src="./r_bg/dish_2.png" alt="oops" class="min5"><br>
+                <span class="min6">Fried Chicken</span>
+                <span class="min7">The Registration Fee</span>
+                <span class="min8">$25.67</span>
+            </div>
+        </div>
+        <div class="m5">
+            <a href="shop.html"><i class="fa-solid fa-arrow-left"></i></a><a href="shop.html">1</a><a href="shop.html">2</a><a href="shop.html">3</a><a href="shop.html"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="main4">
+        <div class="min10">
+            <span class="a6"><i class="fa-solid fa-location-dot"></i><span>Address<br>Hightech City Hydrabad</span>
+                <i class="fa-solid fa-envelope"></i><span>Send mail<br>abc@gmail.com</span>
+                <i class="fa-solid fa-phone-volume"></i><span>Call Us<br>+91-0020381834</span></span>
+        </div>
+        <div class="main5">
+            <div class="min11">
+                <img class="a7" src="./logo/logoWhite.svg" alt="logo">
+                <span>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia
+                    mollis</span>
+                <span class="a8"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+                        class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-youtube"></i></span>
+            </div>
+            <div class="min12">
+                <h2>Quick Links</h2>
+                <nav class="n2">
+                    <a href="">>> &nbsp;About Us</a><br>
+                    <a href="">>> &nbsp;Our Gallery</a><br>
+                    <a href="">>> &nbsp;Our Blogs</a><br>
+                    <a href="">>> &nbsp;FAQ'S</a><br>
+                    <a href="">>> &nbsp;Contact Us</a><br>
+                </nav>
+            </div>
+            <div class="min13">
+                <h2>Our Menu</h2>
+                <nav class="n2">
+                    <a href="">>> &nbsp;Burger King</a><br>
+                    <a href="">>> &nbsp;Pizza King</a><br>
+                    <a href="">>> &nbsp;Fresh Food</a><br>
+                    <a href="">>> &nbsp;Vegetable</a><br>
+                    <a href="">>> &nbsp;Desserts</a><br>
+                </nav>
+            </div>
+            <div class="min14">
+                <h2>Contact Us</h2>
+                <nav class="n3">
+                    <p>Monday-friday: <span style="color: #fc791a;">8am - 4pm</span></p>
+                    <p><span>Saturday: <span style="color: #fc791a;">8am - 12am</span></p>
+                    <input type="email" placeholder="Your email address"><br>
+                    <input type="checkbox" required class="a9"><label>I Agree to the Privacy Policy</label>
+                </nav>
+            </div>
+        </div>
+        <a href="#"><button class="a10"><i class="fa-solid fa-arrow-up"></i></button></a>
+        <div class="main6">
+            <p>&copy; All Copyright 2024 by FreshEat</p>
+            <div class="min15">
+                <a href="#"><button>Term & Condition</button></a>
+                <a href=""><button>Pricacy Policy</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

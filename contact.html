@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <title>Freshy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Rubik", sans-serif;
+        }
+
+        body {
+            background-color: #ebebe0;
+        }
+
+        .n1 {
+            display: flex;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .a1 {
+            height: 20vh;
+            width: 18vw;
+            padding: 35px;
+            background-color: white;
+        }
+
+        .main {
+            float: right;
+        }
+
+        .p1 {
+            height: 7vh;
+            width: 83vw;
+            background-color: #eb0029;
+            display: flex;
+            align-items: center;
+        }
+
+        .min1 {
+            margin-left: 5%;
+            color: white;
+        }
+
+        .min2 {
+            display: flex;
+            margin-left: 60%;
+            color: white;
+        }
+
+        .icon1 {
+            display: flex;
+            gap: 10px;
+            margin-left: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .p2 {
+            height: 13vh;
+            width: 83vw;
+            background-color: black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .p2 a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .p2 a i {
+            margin-left: 8px;
+        }
+
+        .p2 a:hover {
+            color: red;
+        }
+
+        .m1 {
+            display: flex;
+            background-image: url(./bg/bg2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 65vh;
+            width: 100%;
+            flex-direction: column;
+            margin-top: 20vh;
+        }
+
+        .m1 h1 {
+            color: white;
+            font-size: 73px;
+            font-weight: bold;
+            margin-left: 36%;
+            margin-top: 8%;
+        }
+
+        .m1 span {
+            color: #eb0029;
+            margin-left: 46%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .m1 span a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .m1 span a:hover {
+            color: #eb0029;
+        }
+
+        .m2{
+            display: flex;
+            justify-content: space-evenly;
+            height: 40vh;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .m2_1{
+            margin: auto;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid rgb(180, 32, 32);
+        }
+        .m2_1:hover{
+            transform: scale(1.08);
+        }
+        .m2_1 img{
+            margin-top: 30px;
+            margin-left: 42%;
+        }
+        .m2_1 h2{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .m2_1 h6{
+            margin-top: 30px;
+            font-size: 18px;
+            color: gray;
+            text-align: center;
+        }
+        .m3{
+            height: 100vh;
+            width: 100%;
+            margin-top: 100px;
+            border: 1px solid black;
+        }
+        .m3 img{
+            height: 40rem;
+            width: 43rem;
+            margin-top: 45px;
+        }
+        .m3_1{
+            height: 85vh;
+            width: 52%;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-color: white;
+            float: right;
+        }
+        .m3_1 h2{
+            font-size: 30px;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .m3_1 .m3_i{
+            height: 55px;
+            width: 320px;
+            text-indent: 20px;
+            margin-top: 40px;
+            margin-left: 30px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .m3_1 textarea{
+            margin-top: 30px;
+            margin-left: 30px;
+            height: 180px;
+            width: 700px;
+            font-size: 16px;
+        }
+        .m3_min{
+            height: 20px;
+            width: 20px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .m3_2{
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 90%;
+            margin-top: 25px;
+            margin-left: 40px;
+            color: white;
+            padding-left: 300px;
+            background-color: #eb0029;
+            text-decoration: none;
+        }
+
+        /* footer */
+        .main4 {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(45deg, #333333, black);
+        }
+
+        .min10 {
+            height: 140px;
+            width: 80vw;
+            margin-left: 140px;
+            margin-top: 60px;
+            border-radius: 20px;
+            background-color: #fc791a;
+        }
+
+        .min10 .a6 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 32px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .a6 i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            color: #fc791a;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .a6 span {
+            margin-left: -100px;
+        }
+
+        .main5 {
+            display: flex;
+        }
+
+        .min11 {
+            height: 400px;
+            width: 350px;
+            margin-left: 140px;
+            margin-top: 30px;
+            color: grey;
+        }
+
+        .a7 {
+            height: 100px;
+            width: 200px;
+            margin-bottom: 20px;
+            margin-left: 5px;
+        }
+
+        .min11 span {
+            display: block;
+            line-height: 20px;
+        }
+
+        .a8 i {
+            display: inline-block;
+            line-height: 32px;
+            width: 40px;
+            border: 1px white solid;
+            margin-left: 20px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .min12 {
+            color: white;
+            height: 380px;
+            width: 220px;
+            margin-top: 50px;
+            margin-left: 45px;
+        }
+
+        .min12 h2 {
+            text-decoration: underline dotted;
+            text-underline-offset: 10px;
+        }
+
+        .n2 {
+            margin-top: 25px;
+            line-height: 50px;
+            font-size: 18px;
+        }
+
+        .n2 a:hover {
+            margin-left: 5px;
+            color: #eb0029;
+        }
+
+        .n2 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .min13 {
+            color: white;
+            height: 380px;
+            width: 220px;
+            margin-top: 50px;
+        }
+
+        .min13 h2 {
+            text-decoration: underline dotted;
+            text-underline-offset: 10px;
+        }
+
+        .min14 {
+            color: white;
+            height: 380px;
+            width: 280px;
+            margin-top: 50px;
+        }
+
+        .min14 h2 {
+            text-decoration: underline dotted;
+            text-underline-offset: 10px;
+        }
+
+        .n3 p {
+            margin-top: 40px;
+            font-size: 17px;
+            line-height: 18px;
+            cursor: pointer;
+        }
+
+        .n3 p:hover {
+            margin-left: 1px;
+        }
+
+        .n3 input {
+            height: 50px;
+            width: 250px;
+            border-radius: 5px;
+            margin-top: 25px;
+            text-indent: 11px;
+            border-style: none;
+            font-size: 17px;
+        }
+
+        .n3 .a9 {
+            margin-top: 40px;
+            height: 15px;
+            width: 15px;
+        }
+
+        label {
+            margin-left: 8px;
+            font-size: 19px;
+        }
+
+        .a10 {
+            height: 50px;
+            width: 49px;
+            border-radius: 8px;
+            background-color: #fc791a;
+            color: white;
+            border: none;
+            font-size: 20px;
+            margin-left: 95%;
+            cursor: pointer;
+        }
+
+        .a10:hover {
+            background: linear-gradient(blue, red);
+        }
+
+        .main6 {
+            display: flex;
+            height: 13vh;
+            width: 100%;
+            background-color: #eb0029;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .main6 p {
+            color: white;
+            margin-left: 13%;
+
+
+        }
+
+        .main6 .min15 {
+            margin-left: 45%;
+            display: flex;
+            gap: 25px;
+        }
+
+        .min15 button {
+            height: 45px;
+            width: 130px;
+            color: white;
+            border: 1px white solid;
+            border-radius: 10px;
+            background-color: #eb0029;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="n1">
+            <img src="./logo/logo.jpg" alt="oops" class="a1">
+            <div class="main">
+                <div class="p1"><span class="min1"><i class="fa-regular fa-clock"></i> 09:00 am - 06:00 pm</span><span
+                        class="min2">Follow Us : <span class="icon1"><i class="fa-brands fa-instagram"></i> <i
+                                class="fa-brands fa-twitter"></i> <i class="fa-brands fa-facebook"></i> <i
+                                class="fa-brands fa-youtube"></i></span></span></div>
+                <div class="p2">
+                    <a href="index.html">Home <i class="fa-solid fa-plus"></i></a>
+                    <a href="shop.html">Shop <i class="fa-solid fa-plus"></i></a>
+                    <a href="about.html">About Us <i class="fa-solid fa-plus"></i></a>
+                    <a href="contact.html">Contact Us <i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="m1">
+            <h1>CONTACT US</h1>
+            <span><a href="index.html">Home</a>&nbsp; / Contact Us</span>
+        </div>
+
+        <div class="m2">
+            <div class="m2_1">
+                <img src="./icon/location.png" alt="location">
+                <h2>Our Address</h2>
+                <h6>123 Hitech city Hydrabad, Telengana</h6>
+            </div>
+            <div class="m2_1">
+                <img src="./icon/gmail.png" alt="error">
+                <h2>abc@gmail.com</h2>
+                <h6>Email us anytime for any kind ofquety.</h6>
+            </div>
+            <div class="m2_1">
+                <img src="./icon/phone.png" alt="ops">
+                <h2>+91-002038183</h2>
+                <h6>24/7/365 priority Live Chat and ticketing support.</h6>
+            </div>
+            <div class="m2_1">
+                <img src="./icon/clock.png" alt="clock">
+                <h2>Opening Hour</h2>
+                <h6>Sunday-Fri: 9 AM - 6 PM Saturday: 9 AM - 4 PM</h6>
+            </div>  
+        </div>
+
+        <div class="m3">
+            <img src="./bg/lft1.png" alt="oops">
+            <div class="m3_1">
+                <h2>Get In Touch</h2>
+                <input type="text" placeholder="Full Name" required class="m3_i"><input type="text" placeholder="Email Address" class="m3_i">
+                <input type="text" placeholder="Phone Number" class="m3_i"><select class="m3_i">
+                    <option disabled selected>Subject</option>
+                    <option>Complain</option>
+                    <option>Expire date</option>
+                    <option>About Price</option>
+                    <option>About order</option>
+                </select>
+                <textarea placeholder="Write your message here..."></textarea><br>
+                <input type="checkbox" class="m3_min">&nbsp; <label>Collaboratively formulate principle capital. Progressively evolve user</label>
+                <a href="contact.html" class="m3_2">SUBMIT NOW &nbsp;  <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+    <div class="main4">
+        <div class="min10">
+            <span class="a6"><i class="fa-solid fa-location-dot"></i><span>Address<br>Hightech City Hydrabad</span>
+                <i class="fa-solid fa-envelope"></i><span>Send mail<br>abc@gmail.com</span>
+                <i class="fa-solid fa-phone-volume"></i><span>Call Us<br>+91-0020381834</span></span>
+        </div>
+        <div class="main5">
+            <div class="min11">
+                <img class="a7" src="./logo/logoWhite.svg" alt="logo">
+                <span>Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia
+                    mollis</span>
+                <span class="a8"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+                        class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-youtube"></i></span>
+            </div>
+            <div class="min12">
+                <h2>Quick Links</h2>
+                <nav class="n2">
+                    <a href="">>> &nbsp;About Us</a><br>
+                    <a href="">>> &nbsp;Our Gallery</a><br>
+                    <a href="">>> &nbsp;Our Blogs</a><br>
+                    <a href="">>> &nbsp;FAQ'S</a><br>
+                    <a href="">>> &nbsp;Contact Us</a><br>
+                </nav>
+            </div>
+            <div class="min13">
+                <h2>Our Menu</h2>
+                <nav class="n2">
+                    <a href="">>> &nbsp;Burger King</a><br>
+                    <a href="">>> &nbsp;Pizza King</a><br>
+                    <a href="">>> &nbsp;Fresh Food</a><br>
+                    <a href="">>> &nbsp;Vegetable</a><br>
+                    <a href="">>> &nbsp;Desserts</a><br>
+                </nav>
+            </div>
+            <div class="min14">
+                <h2>Contact Us</h2>
+                <nav class="n3">
+                    <p>Monday-friday: <span style="color: #fc791a;">8am - 4pm</span></p>
+                    <p><span>Saturday: <span style="color: #fc791a;">8am - 12am</span></p>
+                    <input type="email" placeholder="Your email address"><br>
+                    <input type="checkbox" required class="a9"><label>I Agree to the Privacy Policy</label>
+                </nav>
+            </div>
+        </div>
+        <a href="#"><button class="a10"><i class="fa-solid fa-arrow-up"></i></button></a>
+        <div class="main6">
+            <p>&copy; All Copyright 2024 by FreshEat</p>
+            <div class="min15">
+                <a href="#"><button>Term & Condition</button></a>
+                <a href=""><button>Pricacy Policy</button></a>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
